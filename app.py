@@ -39,7 +39,7 @@ async def invoke(payload, context):
 
     if not session_id:
         raise Exception("Context session_id is not set")
-
+    print(f"actor_id={actor_id}")
     task = asyncio.create_task(
         agent_task(
             user_message=user_message,
